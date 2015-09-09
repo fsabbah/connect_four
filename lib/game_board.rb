@@ -14,8 +14,11 @@ class GameBoard
   end
 
   def draw_board
+    table_header = *('1'..'8')
+    puts table_header.each { |ele| ele }.join(' ')
+    puts '---------------'
     @game_array.reverse.each do |row|
-      puts row.each { |ele| ele }.join(" ")
+      puts row.each { |ele| ele }.join(' ')
     end
   end
 
