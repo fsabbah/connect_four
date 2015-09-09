@@ -41,6 +41,8 @@ class GameBoard
           if counter[o] >= 4
             return 'o'
           end
+        else
+          counter = [0, 0]
         end
       end
       counter = [0, 0]
@@ -60,6 +62,8 @@ class GameBoard
           if counter[o] >= 4
             return 'o'
           end
+        else
+          counter = [0, 0]
         end
       end
       counter = [0, 0]
@@ -82,6 +86,8 @@ class GameBoard
             if counter[o] >= 4
               return 'o'
             end
+          else
+            counter = [0, 0]
           end
         end
       end
@@ -105,6 +111,8 @@ class GameBoard
             if counter[o] >= 4
               return 'o'
             end
+          else
+            counter = [0, 0]
           end
         end
       end
