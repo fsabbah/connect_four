@@ -24,7 +24,7 @@ module ConnectFour
     end
   end
 
-  def start_game
+  def self.start_game
     game_board = GameBoard.new
     puts "Game Started!"
 
