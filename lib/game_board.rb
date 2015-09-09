@@ -3,6 +3,10 @@ class GameBoard
     @game_array = Array.new(8) { Array.new(8) { '.' } }
   end
 
+  def get_game_array
+    return @game_array
+  end
+
   def add_movement(player, column)
     for index in (0...@game_array[column].length)
       if @game_array[index][column] == '.'
@@ -27,6 +31,7 @@ class GameBoard
     o = 1
     counter = Array.new(2) { 0 }
 
+    # Check the winner in rows
     @game_array.each do |row|
       for index in 0...row.length
         if row[index] == 'x'
@@ -48,6 +53,7 @@ class GameBoard
       counter = [0, 0]
     end
 
+    # Check the winner in columns
     for i in 0...@game_array.length
       for j in 0...@game_array[i].length
         if @game_array[j][i] == 'x'
@@ -69,7 +75,7 @@ class GameBoard
       counter = [0, 0]
     end
 
-
+    # Check the winner in right diagonal
     for k in 0...@game_array.length * 2
       for j in 0...k+1
         i = k - j;
@@ -94,7 +100,7 @@ class GameBoard
       counter = [0, 0]
     end
 
-
+    # Check the winner in left diagonal
     for k in 0...@game_array.length * 2
       for j in 0...k+1
         i = k - j
