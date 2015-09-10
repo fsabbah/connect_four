@@ -125,7 +125,7 @@ class GameBoard
       counter = [0, 0]
     end
 
-    return "nobody"
+    return 'nobody'
   end
 
   def is_full
